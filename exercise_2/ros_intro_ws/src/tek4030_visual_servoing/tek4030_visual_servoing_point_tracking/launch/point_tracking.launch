@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+  
+  <node name="point_tracking" pkg="tek4030_visual_servoing_point_tracking" type="point_tracking" output="screen"/>
+
+</launch>

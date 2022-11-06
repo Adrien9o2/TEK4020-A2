@@ -1,0 +1,8 @@
+prefix=/home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel
+
+Name: tek4030_visual_servoing_msgs
+Description: Description of tek4030_visual_servoing_msgs
+Version: 0.0.0
+Cflags: -I/home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

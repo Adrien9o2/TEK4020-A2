@@ -1,0 +1,2 @@
+tek4030_visual_servoing/tek4030_visual_servoing:tek4030_visual_servoing/tek4030_visual_servoing_camera_controller:tek4030_visual_servoing/tek4030_visual_servoing_gazebo:tek4030_visual_servoing/tek4030_visual_servoing_msgs:tek4030_visual_servoing/tek4030_visual_servoing_point_tracking
+-DCATKIN_DEVEL_PREFIX=/home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel -DCMAKE_INSTALL_PREFIX=/home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/install -G Unix Makefiles

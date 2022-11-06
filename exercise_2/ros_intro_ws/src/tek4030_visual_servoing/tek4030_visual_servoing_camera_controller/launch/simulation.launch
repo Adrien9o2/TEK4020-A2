@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<launch>
+  <include file="$(find tek4030_visual_servoing_gazebo)/launch/visual_servo_gazebo.launch"/>
+  <include file="$(find tek4030_visual_servoing_point_tracking)/launch/point_tracking.launch"/>
+  <include file="$(find tek4030_visual_servoing_camera_controller)/launch/camera_controller.launch"/>
+  <node name="image_view" pkg="rqt_image_view" type="rqt_image_view" output="screen" args="/imgproc/image"/>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel
+
+Name: tek4030_visual_servoing_point_tracking
+Description: Description of tek4030_visual_servoing_point_tracking
+Version: 0.0.0
+Cflags: -I/home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/src/tek4030_visual_servoing/tek4030_visual_servoing_point_tracking/include
+Libs: -L${prefix}/lib 
+Requires: tek4030_visual_servoing_msgs

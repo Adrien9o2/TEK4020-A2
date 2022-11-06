@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+  <scene>
+    <shadows>0</shadows>
+  </scene>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+  <model name="camera">
+    <pose>0 0 1.0 0 1.57 0</pose>
+    <link name="camera_link">
+      <gravity>false</gravity>
+      <visual name="camera_visual">
+        <pose>0 0 0 0 1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <sensor name='camera1' type='camera'>
+        <camera name="head">
+          <horizontal_fov>1.4</horizontal_fov>
+          <image>
+            <width>800</width>
+            <height>600</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.02</near>
+            <far>300</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>1</visualize>
+        <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>camera</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.0</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+      </sensor>
+    </link>
+  </model >
+    
+  <model name="target">
+    <link name="target_link">
+      <gravity>false</gravity>
+      <visual name="target_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <visual name="camera_p1">
+        <pose>0.15 -0.15 0.01 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.001</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1.0 0.0 1.0 1</ambient>
+          <diffuse>1.0 0.0 1.0 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <visual name="camera_p2">
+        <pose>-0.15 -0.15 0.01 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.001</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.0 1.0 0.0 1</ambient>
+          <diffuse>0.0 1.0 0.0 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <visual name="camera_p3">
+        <pose>-0.15 0.15 0.01 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.001</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 1</ambient>
+          <diffuse>0.0 0.0 1.0 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <visual name="camera_p4">
+        <pose>0.15 0.15 0.01 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.001</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 0.0 1</ambient>
+          <diffuse>1.0 1.0 0.0 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+    </link>
+  </model>
+  </world>
+</sdf>
