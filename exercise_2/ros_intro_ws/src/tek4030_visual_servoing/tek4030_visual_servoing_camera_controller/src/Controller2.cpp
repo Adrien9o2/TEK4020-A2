@@ -23,8 +23,10 @@ ros::Publisher* pub_error_global;
 Matrix<long double,8,8> Ks = Matrix<long double,8,8>::Identity();
 
 Point2f points_normalized[4];
-Point2f points_setpoint[4] { Point2f(0.15, 0.15), Point2f(-0.15, 0.15), Point2f(-0.15, -0.15), Point2f(0.15, -0.15)};
-//Point2f points_setpoint[4] {Point2f(0.3, -0.3), Point2f(0.3, 0.3),    Point2f(-0.3, 0.3),    Point2f(-0.3, -0.3)};
+// Point2f points_setpoint[4] { Point2f(0.15, 0.15), Point2f(-0.15, 0.15), Point2f(-0.15, -0.15), Point2f(0.15, -0.15)};
+// bool setpoint1 = true;
+Point2f points_setpoint[4] {Point2f(0.3, -0.3), Point2f(0.3, 0.3),    Point2f(-0.3, 0.3),    Point2f(-0.3, -0.3)};
+bool setpoint1 = false;
 
 tek4030_visual_servoing_msgs::ImageFeaturePoints msgError;
 tek4030_visual_servoing_msgs::ImageFeaturePoints msgSetpoint;
@@ -104,10 +106,30 @@ void calculateAndPublishErrorsandTwist(void)
   Eigen::Matrix<long double,6,1> Vcr = Ls.fullPivHouseholderQr().solve(es);
   
  
-  Vcr.row(0).swap(Vcr.row(1));
-  Vcr.row(3).swap(Vcr.row(4));
-  Vcr = -Vcr;
-  
+  // // Vcr.row(0).swap(Vcr.row(1));
+  // // Vcr.row(3).swap(Vcr.row(4));
+  // Vcr = -Vcr;
+  // long double Vcr0 =
+  // Vcr(0) = -(Vcr(0));
+  // Vcr(3) = -(Vcr(3)),
+
+  if(setpoint1)
+  {
+    long double Vcr0 = Vcr(0);
+    long double Vcr3 = Vcr(3);
+    Vcr(0) = -Vcr0;
+    Vcr(3) = -Vcr3;
+    Vcr = -Vcr;
+    
+  }
+  else
+  {
+    Vcr.row(0).swap(Vcr.row(1));
+    Vcr.row(3).swap(Vcr.row(4));
+    Vcr = -Vcr;
+
+  }
+
 
 
 
