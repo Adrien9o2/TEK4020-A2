@@ -168,21 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/rule:
-	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f CMakeFiles/Makefile2 tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/rule
-.PHONY : tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/rule
-
-# Convenience name for target.
-controller2: tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/rule
-
-.PHONY : controller2
-
-# fast build rule for target.
-controller2/fast:
-	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/build
-.PHONY : controller2/fast
-
-# Convenience name for target.
 tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
 	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f CMakeFiles/Makefile2 tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 .PHONY : tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
@@ -226,6 +211,21 @@ sensor_msgs_generate_messages_nodejs: tek4030_visual_servoing/tek4030_visual_ser
 sensor_msgs_generate_messages_nodejs/fast:
 	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/rule:
+	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f CMakeFiles/Makefile2 tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/rule
+.PHONY : tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/rule
+
+# Convenience name for target.
+Controller2: tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/rule
+
+.PHONY : Controller2
+
+# fast build rule for target.
+Controller2/fast:
+	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/build
+.PHONY : Controller2/fast
 
 # Convenience name for target.
 tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
@@ -272,6 +272,33 @@ camera_controller/fast:
 	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/camera_controller.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/camera_controller.dir/build
 .PHONY : camera_controller/fast
 
+src/Controller2.o: src/Controller2.cpp.o
+
+.PHONY : src/Controller2.o
+
+# target to build an object file
+src/Controller2.cpp.o:
+	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/src/Controller2.cpp.o
+.PHONY : src/Controller2.cpp.o
+
+src/Controller2.i: src/Controller2.cpp.i
+
+.PHONY : src/Controller2.i
+
+# target to preprocess a source file
+src/Controller2.cpp.i:
+	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/src/Controller2.cpp.i
+.PHONY : src/Controller2.cpp.i
+
+src/Controller2.s: src/Controller2.cpp.s
+
+.PHONY : src/Controller2.s
+
+# target to generate assembly for a file
+src/Controller2.cpp.s:
+	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/src/Controller2.cpp.s
+.PHONY : src/Controller2.cpp.s
+
 src/camera_controller.o: src/camera_controller.cpp.o
 
 .PHONY : src/camera_controller.o
@@ -299,33 +326,6 @@ src/camera_controller.cpp.s:
 	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/camera_controller.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/camera_controller.dir/src/camera_controller.cpp.s
 .PHONY : src/camera_controller.cpp.s
 
-src/controller2.o: src/controller2.cpp.o
-
-.PHONY : src/controller2.o
-
-# target to build an object file
-src/controller2.cpp.o:
-	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/src/controller2.cpp.o
-.PHONY : src/controller2.cpp.o
-
-src/controller2.i: src/controller2.cpp.i
-
-.PHONY : src/controller2.i
-
-# target to preprocess a source file
-src/controller2.cpp.i:
-	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/src/controller2.cpp.i
-.PHONY : src/controller2.cpp.i
-
-src/controller2.s: src/controller2.cpp.s
-
-.PHONY : src/controller2.s
-
-# target to generate assembly for a file
-src/controller2.cpp.s:
-	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build && $(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/src/controller2.cpp.s
-.PHONY : src/controller2.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -338,20 +338,20 @@ help:
 	@echo "... edit_cache"
 	@echo "... install/local"
 	@echo "... test"
-	@echo "... controller2"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... Controller2"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... rebuild_cache"
 	@echo "... camera_controller"
+	@echo "... src/Controller2.o"
+	@echo "... src/Controller2.i"
+	@echo "... src/Controller2.s"
 	@echo "... src/camera_controller.o"
 	@echo "... src/camera_controller.i"
 	@echo "... src/camera_controller.s"
-	@echo "... src/controller2.o"
-	@echo "... src/controller2.i"
-	@echo "... src/controller2.s"
 .PHONY : help
 
 

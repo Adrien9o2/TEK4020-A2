@@ -124,6 +124,9 @@ camera_controller_EXTERNAL_OBJECTS =
 /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel/lib/tek4030_visual_servoing_camera_controller/camera_controller: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel/lib/tek4030_visual_servoing_camera_controller/camera_controller: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel/lib/tek4030_visual_servoing_camera_controller/camera_controller: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel/lib/tek4030_visual_servoing_camera_controller/camera_controller: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.3.2.0
+/home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel/lib/tek4030_visual_servoing_camera_controller/camera_controller: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
+/home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel/lib/tek4030_visual_servoing_camera_controller/camera_controller: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
 /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel/lib/tek4030_visual_servoing_camera_controller/camera_controller: tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/camera_controller.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/devel/lib/tek4030_visual_servoing_camera_controller/camera_controller"
 	cd /home/adrienk/TEK4030-A2/exercise_2/ros_intro_ws/build/tek4030_visual_servoing/tek4030_visual_servoing_camera_controller && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/camera_controller.dir/link.txt --verbose=$(VERBOSE)

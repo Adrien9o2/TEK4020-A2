@@ -6,7 +6,7 @@
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
-  <!-- <maintner email="jane.doe@example.com">Jane Doe</maintainer> -->
+  <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
   <maintainer email="kma@todo.todo">kma</maintainer>
 
 
@@ -33,6 +33,9 @@
   <!-- Examples: -->
   <!-- Use depend as a shortcut for packages that are both build and exec dependencies -->
   <!--   <depend>roscpp</depend> -->
+  
+  <build_depend>tek4030_visual_servoing_msgs</build_depend>
+  <exec_depend>tek4030_visual_servoing_msgs</exec_depend>
   <!--   Note that this is equivalent to the following: -->
   <!--   <build_depend>roscpp</build_depend> -->
   <!--   <exec_depend>roscpp</exec_depend> -->
@@ -48,8 +51,6 @@
   <!--   <test_depend>gtest</test_depend> -->
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
-  <depend>tek4030_visual_servoing_msgs</depend>
-  
   <buildtool_depend>catkin</buildtool_depend>
 
 

@@ -7,11 +7,12 @@ project(tek4030_visual_servoing_camera_controller)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED roscpp)
+find_package(catkin REQUIRED COMPONENTS roscpp image_transport sensor_msgs cv_bridge tek4030_visual_servoing_msgs eigen_conversions)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-
+find_package(OpenCV 3.2 EXACT REQUIRED COMPONENTS core highgui imgproc)
+find_package(Eigen3 REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -102,6 +103,7 @@ catkin_package(
   INCLUDE_DIRS include
 #  LIBRARIES tek4030_visual_servoing_camera_controller
 #  CATKIN_DEPENDS other_catkin_pkg
+CATKIN_DEPENDS tek4030_visual_servoing_msgs
 #  DEPENDS system_lib
 )
 
@@ -114,6 +116,8 @@ catkin_package(
 include_directories(
  include
  ${catkin_INCLUDE_DIRS}
+ ${OpenCV_INCLUDE_DIR}
+ ${EIGEN3_INCLUDE_DIR} 
 )
 
 ## Declare a C++ library
@@ -130,6 +134,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(camera_controller src/camera_controller.cpp)
+add_executable(Controller2 src/Controller2.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -140,10 +145,17 @@ add_executable(camera_controller src/camera_controller.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(Controller2 ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(camera_controller
    ${catkin_LIBRARIES}
+   ${OpenCV_LIBS}
+)
+
+target_link_libraries(Controller2
+   ${catkin_LIBRARIES}
+   ${OpenCV_LIBS}
 )
 
 #############

@@ -727,19 +727,6 @@ roscpp_generate_messages_cpp/fast:
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named controller2
-
-# Build rule for target.
-controller2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 controller2
-.PHONY : controller2
-
-# fast build rule for target.
-controller2/fast:
-	$(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/controller2.dir/build
-.PHONY : controller2/fast
-
-#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -777,6 +764,19 @@ sensor_msgs_generate_messages_nodejs: cmake_check_build_system
 sensor_msgs_generate_messages_nodejs/fast:
 	$(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named Controller2
+
+# Build rule for target.
+Controller2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Controller2
+.PHONY : Controller2
+
+# fast build rule for target.
+Controller2/fast:
+	$(MAKE) -f tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/build.make tek4030_visual_servoing/tek4030_visual_servoing_camera_controller/CMakeFiles/Controller2.dir/build
+.PHONY : Controller2/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_cpp
@@ -886,10 +886,10 @@ help:
 	@echo "... tek4030_visual_servoing_msgs_generate_messages_py"
 	@echo "... tek4030_visual_servoing_msgs_genpy"
 	@echo "... roscpp_generate_messages_cpp"
-	@echo "... controller2"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... Controller2"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... camera_controller"

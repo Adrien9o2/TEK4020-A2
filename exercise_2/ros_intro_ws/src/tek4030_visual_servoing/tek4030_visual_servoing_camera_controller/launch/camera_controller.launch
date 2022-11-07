@@ -2,5 +2,5 @@
 <launch>
   
   <node name="camera_controller" pkg="tek4030_visual_servoing_camera_controller" type="camera_controller" output="screen"/>
-
+  <node name="Controller2" pkg="tek4030_visual_servoing_camera_controller" type="Controller2" output="screen"/>
 </launch>
